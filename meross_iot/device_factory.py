@@ -1,4 +1,4 @@
-from meross_iot.supported_devices.power_plugs import Mss310, Mss210, Mss110, Mss425e
+from meross_iot.supported_devices.power_plugs import Mss310, Mss210, Mss110, Mss425e, Mss425f
 
 
 def build_wrapper(
@@ -19,5 +19,7 @@ def build_wrapper(
         return Mss110(token, key, user_id, **device_specs)
     elif device_type.lower() == "mss425e":
         return Mss425e(token, key, user_id, **device_specs)
+    elif device_type.lower() == "mss425f":
+        return Mss425f(token, key, user_id, **device_specs)
     else:
         return None
