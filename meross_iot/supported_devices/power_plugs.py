@@ -430,10 +430,10 @@ class Mss425f(Device):
         return self._execute_cmd("SET", "Appliance.Control.ToggleX", payload)
 
     def enable_usb(self):
-        return self.turn_on_channel(4)
+        return self.turn_on_channel(5)
 
     def disable_usb(self):
-        return self.turn_off_channel(4)
+        return self.turn_off_channel(5)
 
 
 class Mss210(Device):
